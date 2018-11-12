@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Dating App</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"> 
+        <a class="nav-link" href="#">Matches
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Lists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"(click)="logout()" >Logout</a>
+      </li>
+      <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>-->
+    </ul>
+
+    <div *ngIf="loggedIn()" class="dropdown">
+      <a class="dropdown-toggle  text-light" id="dropdownMenuButton">
+        Welcome User
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edit Profile</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#"><i class="fa fa-signout"></i>Logout</a>
+      </div>
+    </div>
+
+    <form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
+      <input #username="ngModel" class="form-control mr-sm-2" type="text" name="username" 
+      placeholder="Username" required [(ngModel)]="model.username">
+      <input #password="ngModel" class="form-control mr-sm-2" type="text" name="password" 
+      placeholder="Password" required [(ngModel)]="model.password">
+      <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+    </form>    
+</nav>
+<!--
+<pre>
+  form valid: {{loginForm.valid}}
+  form touched: {{loginForm.touched}}
+  form dirty: {{loginForm.dirty}}
+  form values: {{loginForm.value|json}}
+  username valid: {{username.valid}}
+  username touched: {{username.touched}}
+  username dirty: {{username.dirty}}
+  username values: {{username.value}}
+  password valid: {{password.valid}}
+  password touched: {{password.touched}}
+  password dirty: {{password.dirty}}
+  password values: {{password.value}}
+</pre>
+-->
