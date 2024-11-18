@@ -7,3 +7,4 @@ This is a complete project to demonstrate APS.NET Core and Angular 6 Application
 Security
 Uses JWT token for security
 Usewr Azure
+Usewr Azure1
