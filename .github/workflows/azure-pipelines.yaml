@@ -2,7 +2,7 @@ commit# ASP.NET Core
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
-#added new coment  Vamsidhar123 456789 BALACHANDRA
+#added new coment  Vamsidhar123 456789 BALACHANDRA 98564321
 pool:
   vmImage: 'Ubuntu 16.04'
 
